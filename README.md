@@ -35,7 +35,7 @@ LangGraph-Based-Multi-Agent-System-for-Insurance-Firms/
 ---
 ## Architecture
 
-![Architecture](workflows/workflows.png)
+![Architecture](workflows/workflow.png)
 
 ---
 ## Tools, Libraries, andgit status Frameworks Used
