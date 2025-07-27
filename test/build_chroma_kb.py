@@ -19,7 +19,7 @@ def embed_to_db(file_path: str):
 
     splits = text_splitter.split_documents(docs)
     vectorstore = Chroma.from_documents(persist_directory="..\db\chroma_db", documents=splits, embedding=get_embedding())
-    vectorstore.persist()
+    # vectorstore.persist()
 
     print("Knowledge base indexed and saved to 'chroma_db'.")
 

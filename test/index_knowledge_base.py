@@ -1,16 +1,16 @@
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.document_loaders import TextLoader
+from langchain_community.document_loaders import TextLoader
 
-loader = TextLoader("data/faqs.txt")
+from utils.config import get_embedding
+
+loader = TextLoader("../data/faqs.txt", encoding = 'UTF-8')
 documents = loader.load()
 
 text_splitter = CharacterTextSplitter(chunk_size=200, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
 
-embeddings = OpenAIEmbeddings()
-vectorstore = Chroma.from_documents(texts, embeddings, persist_directory="..\db\chroma_db")
-vectorstore.persist()
+vectorstore = Chroma.from_documents(texts, get_embedding(), persist_directory="../db/chroma_db")
+# vectorstore.persist()
 
 print("Knowledge base indexed and saved to 'chroma_db'.")
