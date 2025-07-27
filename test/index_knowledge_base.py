@@ -10,7 +10,7 @@ text_splitter = CharacterTextSplitter(chunk_size=200, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
 
 embeddings = OpenAIEmbeddings()
-vectorstore = Chroma.from_documents(texts, embeddings, persist_directory="chroma_db")
+vectorstore = Chroma.from_documents(texts, embeddings, persist_directory="..\db\chroma_db")
 vectorstore.persist()
 
 print("Knowledge base indexed and saved to 'chroma_db'.")

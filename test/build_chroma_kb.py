@@ -19,15 +19,13 @@ def embed_to_db(file_path: str):
 
     splits = text_splitter.split_documents(docs)
     vectorstore = Chroma.from_documents(persist_directory="..\db\chroma_db", documents=splits, embedding=get_embedding())
+    vectorstore.persist()
 
-    results = vectorstore.similarity_search(query="", k=3)
-    for doc in results:
-        print(f"* {doc.page_content} [{doc.metadata}]")
+    print("Knowledge base indexed and saved to 'chroma_db'.")
 
 def retrieve_from_db(query:str):
     vectorstore = Chroma(persist_directory="..\db\chroma_db", embedding_function=get_embedding())
-
-    results = vectorstore.similarity_search(query=query, k=1)
+    results = vectorstore.similarity_search(query=query, k=3)
 
     print("The retrieved content is:")
     index = 0

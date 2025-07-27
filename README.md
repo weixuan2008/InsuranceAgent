@@ -1,6 +1,7 @@
 # Insurance Multi-Agent System
 
-This application is a **multi-agent system** designed to handle various types of insurance-related queries using **LangGraph**, an extension of **LangChain**. The system dynamically routes user queries to appropriate agents based on their context, ensuring accurate and relevant responses. It leverages **Retrieval-Augmented Generation (RAG)** for customer support and **DuckDuckGo** for external information retrieval.
+- Refactor based on original surce https://github.com/docdocode/LangGraph-Based-Multi-Agent-System-for-Insurance-Firms
+- This application is a **multi-agent system** designed to handle various types of insurance-related queries using **LangGraph**, an extension of **LangChain**. The system dynamically routes user queries to appropriate agents based on their context, ensuring accurate and relevant responses. It leverages **Retrieval-Augmented Generation (RAG)** for customer support and **DuckDuckGo** for external information retrieval.
 
 ---
 
@@ -35,7 +36,7 @@ LangGraph-Based-Multi-Agent-System-for-Insurance-Firms/
 ---
 ## Architecture
 
-![Architecture](workflows/workflow.png)
+![Architecture](workflows/flow_updated.png)
 
 ---
 ## Tools, Libraries, andgit status Frameworks Used
@@ -184,7 +185,15 @@ Based on the classification, the query is routed to the appropriate agent:
     ```bash
     pip install -r requirements.txt
 
-5. Run the main.py file from terminal
+5. Run python file under test folder for once to instantiate the knowledge base
+    ```bash
+    python index_knowledge_base.py
+    python build_chroma_kb.py.py
+
+6. Run the main.py file from terminal
     ```bash
     python main.py
-    
+
+7. Run the app.py file for a streamlit app UI
+    ```bash
+    streamlit run app.py

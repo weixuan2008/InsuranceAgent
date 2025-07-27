@@ -123,13 +123,12 @@ workflow.add_node("tool_task", perform_web_search)
 workflow.add_conditional_edges("classify_query", route_based_on_category)
 
 workflow.set_entry_point("classify_query")
-
 app = workflow.compile()
 
 # Save image
-img = app.get_graph().draw_mermaid_png()
-with open(".\workflow.png", "wb") as f:
-    f.write(img)
+# img = app.get_graph().draw_mermaid_png()
+# with open(".\workflow.png", "wb") as f:
+#     f.write(img)
 
 def capture_agent_calls(state : WorkflowState):
     logs = []
