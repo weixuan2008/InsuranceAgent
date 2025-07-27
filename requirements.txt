@@ -1,0 +1,9 @@
+langchain
+langgraph
+duckduckgo-search
+chromadb
+openai
+tiktoken
+python-dotenv
+streamlit
+requests
