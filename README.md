@@ -38,12 +38,6 @@ LangGraph-Based-Multi-Agent-System-for-Insurance-Firms/
 ![Architecture](images/flow_updated.png)
 
 ---
-## Demo Video
-
-[![Demo Video](https://img.youtube.com/vi/_NTIUDtLP5M/0.jpg)](https://www.youtube.com/watch?v=_NTIUDtLP5M)
-
-
----
 ## Tools, Libraries, andgit status Frameworks Used
 
 ### Core Frameworks
@@ -179,7 +173,7 @@ Based on the classification, the query is routed to the appropriate agent:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/docdocode/LangGraph-Based-Multi-Agent-System-for-Insurance
+   git clone 
 
 2. Initiate the virtual environments
 
@@ -189,15 +183,8 @@ Based on the classification, the query is routed to the appropriate agent:
 4. Run
     ```bash
     pip install -r requirements.txt
-5. Run index_knowledge_base.py for once to instantiate the knowledge base
-    ```bash
-    python index_knowledge_base.py
 
-6. Run the main.py file from terminal
+5. Run the main.py file from terminal
     ```bash
     python main.py
-
-7. Run the app.py file for a streamlit app UI
-    ```bash
-    streamlit run app.py
     

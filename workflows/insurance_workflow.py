@@ -128,7 +128,7 @@ app = workflow.compile()
 
 # Save image
 img = app.get_graph().draw_mermaid_png()
-with open("mermaid.png", "wb") as f:
+with open(".\workflow.png", "wb") as f:
     f.write(img)
 
 def capture_agent_calls(state : WorkflowState):
